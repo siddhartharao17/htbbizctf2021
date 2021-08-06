@@ -8,6 +8,8 @@ Hashtags: #htb #ctf #hacking #security
 
 In this CTF, I participated with team smashstack. We finished the competition in the 166th position with 1875 points and 6/44 challenges solved. Out of 6 challenges, I solved 3 in the full pwn and web categories.
 
+![Scoreboard](./scores.png)
+
 # Challenges
 
 ## Full Pwn
