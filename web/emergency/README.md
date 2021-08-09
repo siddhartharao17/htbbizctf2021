@@ -117,7 +117,7 @@ $ cat jwks.json | jq .
 }
 ```
 
-Notice the key ID matches, so this key was being used by the application to verify token signatures. Also, notice the `n` (modulus) and `e` (public exponent) values used in RSA.
+It was a 2048-bit RSA key. Notice the key ID matches, so this key was being used by the application to verify token signatures. Also, notice the `n` (modulus) and `e` (public exponent) values used in RSA.
 
 # Research and Idea
 Next step was to research and read up on the 2 headers. I came across a very helpful medium post - [Hacking JWT Tokens: jku Claim Misuse](https://blog.pentesteracademy.com/hacking-jwt-tokens-jku-claim-misuse-2e732109ac1c). I learned the `jku` header held the JSON Web Key Set (JWKS) URL to the JSON-formatted public keys used for verifying the token, which in this case was `http://localhost/.well-known/jwks.json`. Lastly, `kid` was the key ID value `c7c25d10-7072-42d9-ab90-e4d56dbb32e8`.
