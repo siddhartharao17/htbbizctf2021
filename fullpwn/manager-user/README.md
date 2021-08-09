@@ -97,7 +97,7 @@ File Type: UTF-8 Unicode text, with very long lines, with CRLF line terminators
 Copied to: /home/kali/50131.py
 ```
 
-Reviewed the exploit code to check if any edits are necessary for the exploit to work correctly and also to make sure the exploit did only what it said it did and nothing more. In this case, only the target URL was modified as applicable.  
+Reviewed the exploit code to check if any edits were necessary for the exploit to work correctly and also to make sure the exploit did only what it said it did and nothing more. In this case, only the target URL was modified as applicable.  
 > Note: ALWAYS review any exploit that you have not written before using it.
 
 ```
